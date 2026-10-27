@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #563A45;
+    background-color: #FFF9F4;
+    overflow-x: hidden;
+  }
+}
+
+.font-brand {
+  font-family: 'Outfit', sans-serif;
+}
+
+.font-handwriting {
+  font-family: 'Caveat', cursive;
+}
+
+/* Custom soft scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF9F4;
+}
+::-webkit-scrollbar-thumb {
+  background: #F8DCE7;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FFC4DC;
+}
+
+/* Gentle gloss shimmer animation */
+@keyframes glossShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer-text {
+  background: linear-gradient(90deg, #F04F87 0%, #FF85B3 50%, #F04F87 100%);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: glossShimmer 6s ease-in-out infinite;
+}
